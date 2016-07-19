@@ -1,0 +1,12 @@
+Exercise 9
+
+List all of the cities within the countries of Canada, Austria, Isle of Man, Ireland and Japan.
+
+//SELECT COUNT(*), subtype FROM Entry
+JOIN Phone ON Entry.id = Phone.entryId 
+WHERE Entry.birthday > "1950-10-01" AND Entry.birthday < "1960-10-01" GROUP BY subtype DESC;
+
+// where are cities countries? Address table
+
+SELECT COUNT(*), city FROM Address WHERE country IN('Canada','Austria','Isle of Man','Ireland','Japan')
+GROUP BY city;

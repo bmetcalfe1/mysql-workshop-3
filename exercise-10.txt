@@ -1,0 +1,10 @@
+Exercise 10
+
+Transform all work emails into home emails and vice versa. BE CAREFUL ;)
+
+UPDATE ElectronicMail SET type = CASE
+    WHEN type = "home" THEN "work"
+    WHEN type = "work" THEN "home"
+    ELSE "other"
+    END;
+

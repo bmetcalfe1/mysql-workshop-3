@@ -1,0 +1,12 @@
+Exercise 3
+
+List all of the countries with respective occurence totals in DESC order
+Country names should all appear lowercase
+
+SELECT COUNT(*), LOWER(country) FROM Address GROUP BY country ORDER BY COUNT(*) DESC;
+
++----------+----------------------------------------------+
+| COUNT(*) | LOWER(country)                               |
++----------+----------------------------------------------+
+|       18 | mozambique                                   |
+|       16 | saint helena, ascension and tristan da cunha |

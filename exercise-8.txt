@@ -1,0 +1,23 @@
+Exercise 8
+
+List how many phones were landlines, cellular and fax for entries with birthdates between October 1950 and October 1960
+
+// where are phone types? Phone table
+// where are bdays? Entry table
+
+//SELECT email FROM Account 
+JOIN AddressBook ON Account.id = AddressBook.accountId 
+WHERE AddressBook.id = "100";
+
+SELECT COUNT(*), subtype FROM Entry
+JOIN Phone ON Entry.id = Phone.entryId 
+WHERE Entry.birthday > "1950-10-01" AND Entry.birthday < "1960-10-01" GROUP BY subtype DESC;
+
++----------+----------+
+| COUNT(*) | subtype  |
++----------+----------+
+|      134 | fax      |
+|      138 | cellular |
+|      170 | landline |
++----------+----------+
+3 rows in set (0.01 sec)
